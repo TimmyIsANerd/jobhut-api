@@ -33,6 +33,12 @@ module.exports.routes = {
     controller:'Auth',
     action:'login_post'
   },
+  // Logout
+  '/logout':{
+    controller:'Auth',
+    action:'logout'
+  }
+  ,
   // Dashboard
   '/dashboard': {view : 'dashboard'}
 
