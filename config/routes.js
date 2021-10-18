@@ -20,7 +20,21 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
-
+  // Auth Routes
+  // Register Routes
+  '/auth/register':{view : 'register'},
+  'POST /auth/register':{
+    controller:'Auth',
+    action:'register_post'
+  },
+  // Login Routes
+  '/auth/login':{view : 'login'},
+  'POST /auth/login':{
+    controller:'Auth',
+    action:'login_post'
+  },
+  // Dashboard
+  '/dashboard': {view : 'dashboard'}
 
   /***************************************************************************
   *                                                                          *
