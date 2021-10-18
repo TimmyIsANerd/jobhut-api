@@ -94,6 +94,12 @@ module.exports = {
             return res.json({ status: 'error', error: 'Invalid Email/Password'});
         }
     },
+    // Logout
+    logout:(req,res)=>{
+        res.cookie('jwt','',{httpOnly:true,maxAge:1});
+        res.redirect('/auth/login');
+    }
+    ,
     // Login/Sign Up Success
     dashboard_get:(req,res)=>{
         return res.view('dashboard')
